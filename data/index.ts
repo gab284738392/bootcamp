@@ -82,7 +82,7 @@ export const CERTS = [
   },
   {
     name: "SiKAPTala 2026 Virtual Hackathon",
-    year: "202",
+    year: "2026",
     issuer: "DLSUD College of Information and Computer Studies Student Government",
   },
 ];
