@@ -66,13 +66,7 @@ export default function Projects() {
                   {p.desc}
                 </p>
 
-                <a
-                  href="#"
-                  className="mt-2 inline-flex items-center gap-1.5 text-sm font-extrabold underline underline-offset-4 decoration-current/40 hover:decoration-current/80 transition-all duration-150"
-                  style={{ color: p.accent }}
-                >
-                  See here <span>→</span>
-                </a>
+               
               </div>
             </div>
           ))}

@@ -28,7 +28,9 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ml-2 text-sm font-bold px-5 py-2 rounded-full border-2 border-[#7a9470] text-[#7a9470] hover:bg-[#7a9470] hover:text-white transition-all duration-200"
           >
             Resume
@@ -58,7 +60,10 @@ export default function Navbar() {
               {link}
             </a>
           ))}
-          <a href="#contact" className="text-sm font-bold px-5 py-2 rounded-full border-2 border-[#7a9470] text-[#7a9470] text-center">
+          <a href="/resume.pdf" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm font-bold px-5 py-2 rounded-full border-2 border-[#7a9470] text-[#7a9470] text-center hover:bg-[#7a9470] hover:text-white transition-all duration-200">
             Resume
           </a>
         </div>

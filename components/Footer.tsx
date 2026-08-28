@@ -1,8 +1,8 @@
 const SOCIALS = [
-  { label: "LinkedIn", url: "#" },
-  { label: "Behance", url: "#" },
-  { label: "GitHub", url: "#" },
-  { label: "Facebook", url: "#" },
+  { label: "LinkedIn", url: "https://linkedin.com/in/gabrielle-madarang-3364853a6" },
+  { label: "Behance", url: "https://behance.net/gabriellemadarang/" },
+  { label: "GitHub", url: "https://github.com/gab284738392/" },
+  { label: "Facebook", url: "https://facebook.com/gabrieIIemadarang/" },
 ];
 
 export default function Footer() {
