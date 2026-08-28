@@ -77,12 +77,12 @@ export const CERTS = [
   },
   {
     name: "Introduction to Visual Graphic Design",
-    year: "2023",
+    year: "2026",
     issuer: "TESDA",
   },
   {
     name: "SiKAPTala 2026 Virtual Hackathon",
-    year: "2023",
+    year: "202",
     issuer: "DLSUD College of Information and Computer Studies Student Government",
   },
 ];
