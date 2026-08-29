@@ -36,6 +36,8 @@ export default function Footer() {
             <p className="text-xs font-bold tracking-widest uppercase text-[#7a9470] mb-1">Socials</p>
             {SOCIALS.map((s) => (
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 key={s.label}
                 href={s.url}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#c8c0b4] hover:text-white transition-colors group"
