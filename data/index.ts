@@ -52,7 +52,7 @@ export const EXPERIENCE = [
   {
     role: "Multimedia and Graphic Arts Intern",
     org: "Bye Bye Pinas",
-    period: "Jan 2026 – Aug 2026",
+    period: "Jan 2026 – Mar 2026",
     desc: "Produced digital advertisements and logos for the organization. Collaborated with the Public Relations team to translate event briefs.",
   },
   {
