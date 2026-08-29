@@ -14,7 +14,7 @@ export const SKILLS = [
   {
     category: "Operations",
     icon: "◎",
-    items: ["Project Management", "Documentation", "Kanban", "Git", "Jira"],
+    items: ["Project Management", "Documentation", "Kanban", "Github", "Jira"],
   },
 ];
 
