@@ -1,6 +1,18 @@
 import Image from "next/image";
 
-export default function Hero() {
+type HeroProps = {
+  user: {
+    name: string | null;
+    email: string;
+    role: string;
+  } | null;
+};
+
+export default function Hero({ user }: HeroProps) {
+  const fullName = user?.name ?? "Portfolio";
+  const [firstName, ...rest] = fullName.split(" ");
+  const lastName = rest.join(" ") || "";
+
   return (
     <section id="about" className="w-full bg-[#7a9470]">
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -16,9 +28,13 @@ export default function Hero() {
             style={{ fontFamily: "var(--font-display)" }}
             className="text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white"
           >
-            Gabrielle
-            <br />
-            <span className="italic">Madarang</span>
+            {firstName}
+            {lastName ? (
+              <>
+                <br />
+                <span className="italic">{lastName}</span>
+              </>
+            ) : null}
           </h1>
 
           <p className="text-[#d4e6cf] text-lg leading-relaxed max-w-md">
@@ -65,7 +81,7 @@ export default function Hero() {
 
               <Image
                 src="/gabrielle.png"
-                alt="Gabrielle Madarang"
+                alt={fullName}
                 fill
                 className="object-cover object-top"
               />

@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Users {
+  id             Int              @id @default(autoincrement())
+  name           String?
+  email          String           @unique
+  password       String
+  role           String           @default("user")
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  projects       Projects[]
+  experiences    Experiences[]
+  certifications Certifications[]
+  skills         SkillItems[]
+}
+
+model SkillCategories {
+  id       Int          @id @default(autoincrement())
+  category String
+  icon     String
+  order    Int          @default(0)
+  items    SkillItems[]
+}
+
+model SkillItems {
+  id         Int             @id @default(autoincrement())
+  name       String
+  order      Int             @default(0)
+  category   SkillCategories @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId Int
+  usersId    Int
+  users      Users           @relation(fields: [usersId], references: [id])
+}
+
+model Projects {
+  id          Int      @id @default(autoincrement())
+  name        String
+  tag         String
+  year        String
+  description String
+  image       String?
+  color       String?
+  accent      String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  usersId     Int
+  users       Users    @relation(fields: [usersId], references: [id])
+}
+
+model Experiences {
+  id          Int      @id @default(autoincrement())
+  role        String
+  org         String
+  period      String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  usersId     Int
+  users       Users    @relation(fields: [usersId], references: [id])
+}
+
+model Certifications {
+  id        Int      @id @default(autoincrement())
+  name      String
+  year      String
+  issuer    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  usersId   Int
+  users     Users    @relation(fields: [usersId], references: [id])
+}

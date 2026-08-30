@@ -1,7 +1,16 @@
 import Chip from "@/components/Chip";
-import { SKILLS } from "@/data";
 
-export default function Skills() {
+type SkillGroup = {
+  category: string;
+  icon: string;
+  items: string[];
+};
+
+type SkillsProps = {
+  skills: SkillGroup[];
+};
+
+export default function Skills({ skills }: SkillsProps) {
   return (
     <section id="skills" className="w-full bg-[#f8f3ec]">
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 py-20 md:py-24">
@@ -21,7 +30,7 @@ export default function Skills() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {SKILLS.map((group) => (
+          {skills.map((group) => (
             <div
               key={group.category}
               className="p-7 rounded-2xl border border-[#d6cfc6] bg-white hover:shadow-md transition-shadow duration-200"
