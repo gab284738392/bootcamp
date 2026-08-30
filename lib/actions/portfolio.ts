@@ -85,7 +85,7 @@ export async function getPortfolio(
     email?: string | null,
 ): Promise<PortfolioData> {
     const normalizedEmail = email?.trim();
-    const isPersonalProfile = normalizedEmail === "eme@gmail.com";
+    const isPersonalProfile = normalizedEmail === "gabmadarang33@gmail.com";
 
     if (!normalizedEmail) {
         return fallbackPortfolio;
