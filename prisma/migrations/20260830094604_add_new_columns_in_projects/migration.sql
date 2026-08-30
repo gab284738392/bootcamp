@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE `projects` ADD COLUMN `accent` VARCHAR(191) NULL,
+    ADD COLUMN `color` VARCHAR(191) NULL,
+    ADD COLUMN `image` VARCHAR(191) NULL;
